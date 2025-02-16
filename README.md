@@ -1,5 +1,5 @@
 
-![Uploading 스크린샷 2025-02-16 오후 11.49.45.png…]()
+![Uploading 스크린샷 2025-02-16 오후 11.51.29.png…]()
 
 
 https://youtu.be/vDLzqtjw62U
