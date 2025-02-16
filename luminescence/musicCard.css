@@ -1,0 +1,211 @@
+/* 글리치 효과 : %를 더 많이 쪼개고  translate, color 가 불규칙 할수록 더 글리치 효과 같아짐
+  글씨의 그림자 + 색 + 변화도 */
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(252, 253, 216, 0.5);
+        transform: translate(0);
+    }
+
+    5% {
+        text-shadow: 2px 2px 0 rgb(255, 27, 255), -1px -1px 0 rgba(0, 0, 0, 0.5);
+        transform: translate(1, 1);
+    }
+
+    10% {
+        text-shadow: 1px 1px 0 rgba(169, 162, 131, 0.8), -1px -1px 0 rgba(10, 2, 255, 0.5);
+        transform: translate(-1px, -1px);
+    }
+
+    13% {
+        text-shadow: 2px 2px 0 rgb(255, 27, 255), -1px -1px 0 rgba(0, 0, 0, 0.5);
+        transform: translate(-1px, 0.5px);
+    }
+
+    15% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgb(211, 12, 12);
+        transform: translate(-0.5px, -1px);
+    }
+
+    20% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(254, 247, 196, 0.5);
+        transform: translate(-1px, -1px);
+    }
+
+    30% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 140, 0, 0.5);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(244, 218, 170, 0.5);
+        transform: translate(1px, 1px);
+    }
+
+    50% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 179, 0, 0.5);
+        transform: translate(-1px, 1px);
+    }
+
+    60% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(204, 191, 72, 0.5);
+        transform: translate(-1px, -1px);
+    }
+
+    70% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.5);
+        transform: translate(-1px, 1px);
+    }
+
+    80% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.5);
+        transform: translate(1px, 1px);
+    }
+
+    85% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.5);
+        transform: translate(-1px, -1px);
+    }
+
+    87% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.5);
+        transform: translate(-1px, 1px);
+    }
+
+    90% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(255, 255, 255, 0.5);
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        text-shadow: 1px 1px 0 rgba(255, 212, 19, 0.8), -1px -1px 0 rgba(224, 158, 66, 0.5);
+        transform: translate(0);
+    }
+}
+
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body {
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    /* container들을 중앙에 정렬시킴 */
+    align-items: center;
+    flex-wrap: wrap;
+    /* 여러 줄로 감싸기 */
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Tenada';
+    animation: glitch 1s infinite;
+    /* 반짝이 효과 가져와서 쓰기 무한 반복 */
+    margin: 20px 0;
+    /* 사진과의 간격을 띄우기 위해 */
+    position: -webkit-sticky;
+    /* 절대위치 설정 */
+    top: 10px;
+    /* 상단에서 좀 떨어져있게  */
+    left: 50%;
+    /* 가로 중앙 정렬 */
+    transform: translateX(-50%);
+    font-size: 6em;
+    font-weight: bolder;
+    text-shadow:
+        1px 1px 0 rgba(255, 255, 255, 0.5),
+        /* 기본 그림자 */
+        -1px -1px 0 rgb(251, 124, 245),
+        2px 2px 0 rgb(255, 255, 255),
+        /* 두 번째 그림자 */
+        -2px -2px 0 rgb(255, 252, 159),
+        0 0 80px rgb(255, 255, 253);
+    /* 빛나는 효과 */
+}
+
+.link {
+
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.container {
+    width: 400px;
+    height: 400px;
+    transition: all 0.1s;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    opacity: 0.50;
+}
+
+.bg-video__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+.overlay {
+    position: absolute;
+    /* 오버레이를 이미지 내부에 정확히 위치시키기 위해 사용
+     부모 요소 container 안에 배치 됨 */
+
+    width: 360px;
+    height: 360px;
+    /*  오버레이의 크기를 카드와 일치하게 설정하여 오버레이가 카드 전체를 덮게 함 */
+
+
+    background: linear-gradient(110deg,
+            transparent 40%,
+            rgba(255, 219, 112, 0.8) 45%,
+            rgba(132, 50, 255, 0.6) 50%,
+            transparent 100%);
+    /* linear-gradient () : 110deg : 방향 
+        () 안의 색감과 밝기로 오버레이의. 배경 필터를 만들어준다  */
+
+    filter: brightness(1.1) opacity(2.8);
+    /* 필터의 밝기와 투명도 */
+    mix-blend-mode: color-dodge;
+    /* 오버레와 이미지가 혼합되는 방식 
+        color-dodge 두 색상을 선명하게 혼합시킴 */
+    background-size: 150% 150%;
+    /* 필터의 크기 */
+    background-position: 45%;
+    /* 필터의 위치 (숫자가 작을수록 오른쪽으로 가는듯) */
+    transition: all 0.3s;
+    /* 필터이 사라지는 속도 */
+}
+
+.card {
+    width: 360px;
+    height: 360px;
+    background-size: cover;
+}

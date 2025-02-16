@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>私が好きなものでいっぱいなの</title>
+  <link rel="stylesheet" href="musicCard.css">
+
+
+
+  <div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop>
+
+      <source src="idolMovie.MP4" type="video/MP4" />
+    </video>
+
+  </div>
+
+
+<body>
+
+  <!-- 페이지 제목을 중앙에 정렬한다는 뜻  -->
+  <div style="display: flex; justify-content: center;">
+    <h1>私の大好きな音楽の世界へようこそ</h1>
+  </div>
+
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="container">
+
+      <!-- ?container들을 flex를 사용하여 중앙정렬 한다는 뜻 -->
+      <a href="https://www.youtube.com/watch?v=YLcwg1_4eiA" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music1.jpeg');"></div>
+      </a>
+
+    </div>
+
+    <!-- 컨테이너 클래스로 각각의 객체들을 감싸서 이벤트가 모두 적용되도록 한다   -->
+    <!-- 부모 요소 container , 자식요소  overlay , card-->
+    <!-- 이미지 객체인 card 는 맨 아래에 배치 -->
+
+    <div class="container">
+      <a href="https://youtu.be/PBkzz0Fh3f0?si=WArVA5kX3U3UoRW3" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music2.jpeg');"></div>
+      </a>
+    </div>
+
+    <!-- 이미지 불러오는 법 : 
+    <div class ="클래스명 " style =  "background-image: url (이미지 경로) ;" </div>-->
+
+
+    <div class="container">
+      <a href="//www.youtube.com/watch?v=FxyC6ev6-4U" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music3.jpeg');"></div>
+      </a>
+    </div>
+
+    <div class="container">
+      <a href="https://www.youtube.com/watch?v=4-4dnkAjMGQ" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music4.jpeg');"></div>
+      </a>
+    </div>
+
+    <div class="container">
+      <a href="https://www.youtube.com/watch?v=ZRtdQ81jPUQ" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('idol.jpeg');"></div>
+      </a>
+    </div>
+
+    <div class="container">
+      <a href="https://www.youtube.com/@wanuka" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music5.jpeg');"></div>
+      </a>
+    </div>
+
+    <div class="container">
+      <a href="https://www.youtube.com/watch?v=gqUStT2oax0" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music6.jpeg');"></div>
+      </a>
+    </div>
+
+
+    <div class="container">
+      <a href="https://www.youtube.com/watch?v=GJI4Gv7NbmE" class="link">
+        <div class="overlay"></div>
+        <div class="card" style="background-image: url('music7.jpeg');"></div>
+      </a>
+    </div>
+
+
+
+
+    <script src="musicCard.js"></script>
+
+</body>
