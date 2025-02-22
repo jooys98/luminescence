@@ -8,5 +8,4 @@ https://youtu.be/vDLzqtjw62U
 html의 구조와 , javascript 이벤트 처리 + css 스타일링 연습 
 
 
-![Uploading 스크린샷 2025-02-16 오후 11.51.29.png…]()
-
+![Uploading 스크린샷 2025-02-16 오후 11.51.29.png…]()
